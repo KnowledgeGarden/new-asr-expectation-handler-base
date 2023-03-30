@@ -1,5 +1,5 @@
 /*
- * Copyright 2019 TopicQuests Foundation
+ * Copyright 2019, 2023 TopicQuests Foundation
  *  This source code is available under the terms of the Affero General Public License v3.
  *  Please see LICENSE.txt for full license terms, including the availability of proprietary exceptions.
  */
@@ -18,7 +18,7 @@ import net.minidev.json.JSONObject;
 public class KafkaHandler {
 	private ASRExpectationEnvironment environment;
 	private StringConsumer consumer;
-//	private SentenceProducer producer;
+//	private ExpectationProducer producer;
 	private final boolean isRewind;
 	private final int pollSeconds = 2;
 	private final String
@@ -39,7 +39,7 @@ public class KafkaHandler {
 		//PRODUCER_TOPIC = pTopic;
 		consumer = new StringConsumer(environment, AGENT_GROUP,
 					CONSUMER_TOPIC, listener, isRewind, pollSeconds);
-//		producer = new SentenceProducer(environment, AGENT_GROUP);
+//		producer = new ExpectationProducer(environment, AGENT_GROUP);
 //		PRODUCER_KEY = AGENT_GROUP;
 	}
 	
