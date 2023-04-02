@@ -26,7 +26,7 @@ public class ASRExpectationEnvironment extends ASRBaseEnvironment {
 	 * 
 	 */
 	public ASRExpectationEnvironment() {
-		super("asr-expectation-config.xml", null, "logger.properties");
+		super("asr-expectation-config.xml", "logger.properties");
 		kafkaProps = Configurator.getProperties("kafka-topics.xml");
 		eventListener = new SentenceListener(this);
 
